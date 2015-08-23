@@ -5,7 +5,7 @@ node[:deploy].each do |appname, deployconfig|
   # use template .redis.json.erb. to generate 'config/redis.json'
   template "#{approot}/shared/config/log.json" do
     source "log.json.erb"
-    cookbook "log"
+    cookbook "td_log"
 
     # set mode, group and owner of generated file
     mode 00660
